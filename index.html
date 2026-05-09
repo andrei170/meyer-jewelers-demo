@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meyer Jewelers. 75 Years of Engagement Rings + Fine Jewelry in Green Bay, WI</title>
+  <meta name="description" content="Two generations. One Green Bay storefront. Since 1950, Meyer Jewelers has handled the engagement rings, wedding bands, and family heirloom repairs for thousands of Northeast Wisconsin families.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0F1B2D;
+      --navy-mid: #1B2B47;
+      --gold: #B89968;
+      --gold-deep: #8C7349;
+      --cream: #F7F3EC;
+      --bone: #E8E0D2;
+      --ink: #1A1A1A;
+      --ink-soft: #4A4A4A;
+      --line: #DDD3C0;
+      --white: #FFFFFF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(15, 27, 45, 0.97); backdrop-filter: blur(8px);
+      padding: 16px 0; border-bottom: 1px solid rgba(184, 153, 104, 0.2);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; }
+    .brand {
+      color: var(--white); font-family: 'Cormorant Garamond', serif;
+      font-size: 26px; font-weight: 600; letter-spacing: 1px;
+    }
+    .brand span { color: var(--gold); }
+    .nav-links { display: flex; gap: 32px; font-size: 14px; font-weight: 500; }
+    .nav-links a { color: rgba(255,255,255,0.85); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .cta-btn {
+      background: var(--gold); color: var(--navy);
+      padding: 12px 24px; border-radius: 2px;
+      font-size: 13px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; transition: all 0.2s;
+      border: 1px solid var(--gold); display: inline-block;
+    }
+    .cta-btn:hover { background: transparent; color: var(--gold); }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    .hero {
+      padding: 120px 0 100px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      color: var(--white); position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -50%; right: -20%;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(184, 153, 104, 0.15) 0%, transparent 70%);
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.3fr 1fr; gap: 64px;
+      align-items: center; position: relative;
+    }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .hero-eyebrow {
+      font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif; font-weight: 500;
+      font-size: clamp(44px, 5.5vw, 72px); line-height: 1.05;
+      margin-bottom: 28px; letter-spacing: -0.5px;
+    }
+    .hero h1 em { color: var(--gold); font-style: italic; }
+    .hero-sub {
+      font-size: 19px; color: rgba(255,255,255,0.82);
+      margin-bottom: 40px; max-width: 540px;
+    }
+    .hero-actions { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+    .hero-phone strong { color: var(--white); font-size: 17px; display: block; }
+    .hero-phone { color: rgba(255,255,255,0.85); font-size: 13px; }
+    .hero-vis {
+      position: relative; aspect-ratio: 4/5;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+      border-radius: 4px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    }
+    .hero-vis-mark {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--navy); text-align: center;
+      transform: rotate(-3deg);
+    }
+    .hero-vis-mark .M {
+      font-size: 200px; font-weight: 600; line-height: 0.9;
+      letter-spacing: -8px;
+    }
+    .hero-vis-mark .est { font-size: 14px; letter-spacing: 4px; margin-top: 8px; opacity: 0.7; }
+
+    .trust { background: var(--white); padding: 36px 0; border-bottom: 1px solid var(--line); }
+    .trust-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center;
+    }
+    @media (max-width: 768px) { .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+    .trust-item .num {
+      font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600;
+      color: var(--navy); display: block; line-height: 1;
+    }
+    .trust-item .num span { color: var(--gold); }
+    .trust-item .lbl {
+      font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--ink-soft); margin-top: 8px;
+    }
+
+    section { padding: 100px 0; }
+    .section-header { text-align: center; max-width: 720px; margin: 0 auto 72px; }
+    .section-eyebrow {
+      font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 18px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif; font-weight: 500;
+      font-size: clamp(36px, 4.5vw, 56px); line-height: 1.1; color: var(--navy);
+      margin-bottom: 18px; letter-spacing: -0.5px;
+    }
+    .section-sub { font-size: 18px; color: var(--ink-soft); }
+
+    .collections-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    @media (max-width: 900px) { .collections-grid { grid-template-columns: 1fr; } }
+    .collection {
+      background: var(--white); border-radius: 4px; overflow: hidden;
+      border: 1px solid var(--line); transition: all 0.3s;
+    }
+    .collection:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(15, 27, 45, 0.1); }
+    .collection-vis {
+      aspect-ratio: 4/3; position: relative;
+      background: linear-gradient(135deg, var(--bone) 0%, var(--cream) 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .collection-vis-icon {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 88px; color: var(--gold); font-weight: 500;
+      letter-spacing: -2px;
+    }
+    .collection-body { padding: 32px; }
+    .collection-tag {
+      display: inline-block; font-size: 10px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 12px;
+    }
+    .collection h3 {
+      font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500;
+      color: var(--navy); margin-bottom: 10px;
+    }
+    .collection-price {
+      font-size: 14px; color: var(--ink-soft); margin-bottom: 16px;
+    }
+    .collection-price strong { color: var(--navy); font-size: 16px; font-weight: 600; }
+    .collection p { color: var(--ink-soft); font-size: 15px; margin-bottom: 24px; }
+    .collection-cta {
+      font-size: 12px; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--navy);
+      border-bottom: 2px solid var(--gold); padding-bottom: 4px;
+      display: inline-block;
+    }
+
+    .story { background: var(--navy); color: var(--white); }
+    .story-grid {
+      display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: center;
+    }
+    @media (max-width: 900px) { .story-grid { grid-template-columns: 1fr; } }
+    .story-img {
+      aspect-ratio: 4/5;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+      border-radius: 4px; overflow: hidden; position: relative;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+    .story-img-text {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--navy); text-align: center; padding: 40px;
+    }
+    .story-img-text .yr { font-size: 96px; font-weight: 600; letter-spacing: -2px; line-height: 1; }
+    .story-img-text .nm { font-size: 24px; margin-top: 12px; letter-spacing: 2px; opacity: 0.8; }
+    .story h2 {
+      font-family: 'Cormorant Garamond', serif; font-weight: 500;
+      font-size: clamp(36px, 4.5vw, 52px); line-height: 1.1; color: var(--white);
+      margin-bottom: 24px; letter-spacing: -0.5px;
+    }
+    .story h2 em { color: var(--gold); font-style: italic; }
+    .story p { font-size: 17px; color: rgba(255,255,255,0.82); margin-bottom: 18px; }
+    .story-quote {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 24px; color: var(--gold); padding: 28px 0;
+      border-top: 1px solid rgba(184, 153, 104, 0.3);
+      border-bottom: 1px solid rgba(184, 153, 104, 0.3);
+      margin: 36px 0;
+    }
+
+    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px) { .services-grid { grid-template-columns: 1fr; } }
+    .service-card {
+      background: var(--white); border: 1px solid var(--line);
+      padding: 32px 24px; border-radius: 4px; text-align: center;
+      transition: all 0.3s;
+    }
+    .service-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+    .service-card-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--cream); border: 2px solid var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px; color: var(--navy); font-weight: 600;
+    }
+    .service-card h4 {
+      font-family: 'Cormorant Garamond', serif; font-size: 22px;
+      color: var(--navy); margin-bottom: 10px; font-weight: 500;
+    }
+    .service-card p { font-size: 14px; color: var(--ink-soft); }
+
+    .reviews { background: var(--bone); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    @media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr; } }
+    .review {
+      background: var(--white); padding: 36px; border-radius: 4px;
+      border-left: 4px solid var(--gold);
+    }
+    .review-stars { color: var(--gold); font-size: 18px; letter-spacing: 3px; margin-bottom: 16px; }
+    .review-quote {
+      font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic;
+      color: var(--ink); margin-bottom: 24px; line-height: 1.5;
+    }
+    .review-author { font-size: 14px; color: var(--ink-soft); }
+    .review-author strong { color: var(--navy); display: block; font-size: 15px; font-style: normal; }
+
+    .visit { background: var(--white); }
+    .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    @media (max-width: 900px) { .visit-grid { grid-template-columns: 1fr; } }
+    .visit-info h2 {
+      font-family: 'Cormorant Garamond', serif; font-weight: 500;
+      font-size: clamp(34px, 4vw, 48px); line-height: 1.1; color: var(--navy);
+      margin-bottom: 24px; letter-spacing: -0.5px;
+    }
+    .visit-row {
+      display: flex; gap: 24px; padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .visit-row strong {
+      font-family: 'Cormorant Garamond', serif; font-size: 16px;
+      color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase;
+      min-width: 120px;
+    }
+    .visit-row span { color: var(--ink); font-size: 16px; }
+    .visit-map {
+      aspect-ratio: 1/1;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      border-radius: 4px; padding: 48px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: var(--white); text-align: center;
+    }
+    .visit-map-mark {
+      font-family: 'Cormorant Garamond', serif; font-size: 80px; color: var(--gold);
+      margin-bottom: 16px; line-height: 1;
+    }
+    .visit-map-addr { font-size: 17px; line-height: 1.7; }
+    .visit-map-since {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 22px; color: var(--gold); margin-top: 24px;
+    }
+
+    .final-cta {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--gold-deep) 100%);
+      color: var(--white); text-align: center; padding: 100px 0;
+    }
+    .final-cta h2 {
+      font-family: 'Cormorant Garamond', serif; font-weight: 500;
+      font-size: clamp(38px, 5vw, 60px); line-height: 1.1;
+      margin-bottom: 18px; letter-spacing: -0.5px;
+    }
+    .final-cta p {
+      font-size: 19px; color: rgba(255,255,255,0.85);
+      max-width: 640px; margin: 0 auto 40px;
+    }
+    .final-actions {
+      display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; align-items: center;
+    }
+    .phone-large {
+      font-family: 'Cormorant Garamond', serif; font-size: 32px;
+      color: var(--white); display: flex; align-items: center; gap: 14px;
+    }
+
+    footer { background: #0A1320; color: rgba(255,255,255,0.7); padding: 64px 0 32px; }
+    .foot-grid {
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px;
+    }
+    @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 540px) { .foot-grid { grid-template-columns: 1fr; } }
+    footer h5 {
+      color: var(--gold); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 16px; font-weight: 600;
+    }
+    footer ul { list-style: none; }
+    footer li { margin-bottom: 8px; font-size: 14px; }
+    .foot-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px;
+    }
+    .foot-brand {
+      font-family: 'Cormorant Garamond', serif; font-size: 26px;
+      color: var(--white); margin-bottom: 16px; font-weight: 600;
+    }
+    .foot-brand span { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="brand">Meyer <span>Jewelers</span></a>
+    <nav class="nav-links">
+      <a href="#engagement">Engagement</a>
+      <a href="#fine">Fine Jewelry</a>
+      <a href="#repair">Repair</a>
+      <a href="#story">Our Story</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a href="#contact" class="cta-btn">Book Appointment</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-eyebrow">Green Bay · Established 1950</div>
+      <h1>Two generations. <em>One storefront.</em> Every Northeast Wisconsin engagement ring story since 1950.</h1>
+      <p class="hero-sub">Andy Meyer opened the doors in 1950. Jim Meyer has run it since. Three thousand engagement rings later, Meyer Jewelers is still the only family-owned jeweler on East Mason Street where the ring on your finger was sized, set, and resized by the same family that sold it to you.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="cta-btn">Book Private Appointment</a>
+        <div class="hero-phone">Or stop in<br><strong>(920) 432-1056</strong></div>
+      </div>
+    </div>
+    <div class="hero-vis">
+      <div class="hero-vis-mark">
+        <div class="M">M</div>
+        <div class="est">EST · 1950</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <span class="num"><span>75</span> yrs</span>
+      <div class="lbl">In Green Bay</div>
+    </div>
+    <div class="trust-item">
+      <span class="num">2nd</span>
+      <div class="lbl">Generation Family Owned</div>
+    </div>
+    <div class="trust-item">
+      <span class="num">In-House</span>
+      <div class="lbl">Repair &amp; Resizing</div>
+    </div>
+    <div class="trust-item">
+      <span class="num">4.5★</span>
+      <div class="lbl">Google &amp; TrustAnalytica</div>
+    </div>
+  </div>
+</section>
+
+<section id="engagement">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Featured Collections</div>
+      <h2 class="section-title">The pieces Northeast Wisconsin proposes with.</h2>
+      <p class="section-sub">Three collections we hand-select and stock. Walk in to try them on. Custom design available on every piece.</p>
+    </div>
+
+    <div class="collections-grid">
+      <div class="collection">
+        <div class="collection-vis"><div class="collection-vis-icon">◊</div></div>
+        <div class="collection-body">
+          <div class="collection-tag">Most Popular</div>
+          <h3>Engagement Rings</h3>
+          <div class="collection-price"><strong>From $1,800</strong> · Most range $3,500–$12,000</div>
+          <p>Round, oval, cushion, and emerald cut diamonds set in 14K and 18K gold or platinum. Custom design with no markup. Sized free for life on every ring sold here.</p>
+          <a href="#contact" class="collection-cta">View Engagement Collection →</a>
+        </div>
+      </div>
+
+      <div class="collection">
+        <div class="collection-vis"><div class="collection-vis-icon">∞</div></div>
+        <div class="collection-body">
+          <div class="collection-tag">Bridal</div>
+          <h3>Wedding Bands</h3>
+          <div class="collection-price"><strong>From $480</strong> · Diamond bands from $1,400</div>
+          <p>Classic, stacked, eternity, and matching sets. White, yellow, and rose gold. Platinum and palladium options. Engraving included on all bands.</p>
+          <a href="#contact" class="collection-cta">View Wedding Bands →</a>
+        </div>
+      </div>
+
+      <div class="collection">
+        <div class="collection-vis"><div class="collection-vis-icon">◈</div></div>
+        <div class="collection-body">
+          <div class="collection-tag">Fine Jewelry</div>
+          <h3>Pandora &amp; Designer</h3>
+          <div class="collection-price"><strong>From $65</strong> · Pandora authorized retailer</div>
+          <p>Pandora bracelets, charms, and rings. Plus our own designer collection of pendants, earrings, and tennis bracelets. Gift-wrapped at no charge.</p>
+          <a href="#contact" class="collection-cta">View Fine Jewelry →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="story" class="story">
+  <div class="container story-grid">
+    <div class="story-img">
+      <div class="story-img-text">
+        <div class="yr">1950</div>
+        <div class="nm">A. MEYER</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-eyebrow" style="color: var(--gold);">Two Generations on East Mason</div>
+      <h2>Andy Meyer started something. <em>Jim Meyer kept it.</em></h2>
+      <p>Andy Meyer opened Meyer Jewelers in 1950. He ran it the way Green Bay families wanted to be treated. He picked up the phone himself. He fixed the ring you had since the 70s. He told you the price up front.</p>
+      <p>Jim Meyer took over in the 90s. The same shop, the same East Mason address, the same rules. The same families come back when their kids get engaged. Their kids' kids are starting to come back now.</p>
+      <div class="story-quote">"We promise to treat our customers with the honesty and respect they deserve."</div>
+      <p style="font-size: 14px; opacity: 0.7;">- Jim Meyer, Owner. Meyer Jewelers, second generation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="repair">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Services</div>
+      <h2 class="section-title">Everything your jeweler should be able to do.</h2>
+      <p class="section-sub">Done in-house, on East Mason. Most repairs back in your hands within five business days.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-icon">◇</div>
+        <h4>Ring Sizing</h4>
+        <p>Sized free for life on any ring purchased here. Other rings from $35.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">⌘</div>
+        <h4>Stone Setting &amp; Replacement</h4>
+        <p>Loose, lost, or damaged stones reset by certified bench jewelers. From $85.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">⚭</div>
+        <h4>Custom Design</h4>
+        <p>Heirloom remounts. Original engagement designs. CAD-modeled in-shop. Free consultation.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">⚖</div>
+        <h4>Appraisals &amp; Insurance</h4>
+        <p>GIA-aligned appraisals for insurance, estate, and tax purposes. From $75.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Reviews</div>
+      <h2 class="section-title">Three generations of Green Bay families. One jeweler.</h2>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-quote">"My grandfather bought my grandmother's wedding ring at Meyer's. My dad bought my mom's there. I bought my fiancée's there last week. Same store. Same family. Felt right."</div>
+        <div class="review-author"><strong>Mike S.</strong>De Pere, WI</div>
+      </div>
+      <div class="review">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-quote">"Brought in a ring from my mom that needed a reset and a sizing. Jim did the work himself. Done in three days. Fair price. They don't make jewelers like this anymore."</div>
+        <div class="review-author"><strong>Patricia K.</strong>Green Bay, WI</div>
+      </div>
+      <div class="review">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-quote">"We tried three other jewelers in town for a custom band. Meyer's was the only one who actually drew it out, gave us a price, and built it on time. Will only go here from now on."</div>
+        <div class="review-author"><strong>The Vandenbergs</strong>Howard, WI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="container visit-grid">
+    <div class="visit-info">
+      <div class="section-eyebrow">Visit</div>
+      <h2>One storefront. Same address since 1950.</h2>
+      <div class="visit-row"><strong>Address</strong><span>1262 E Mason St<br>Green Bay, WI 54301</span></div>
+      <div class="visit-row"><strong>Phone</strong><span>(920) 432-1056</span></div>
+      <div class="visit-row"><strong>Hours</strong><span>Mon-Fri 9:30a-5:30p<br>Sat 9:30a-3:00p · Closed Sun</span></div>
+      <div class="visit-row"><strong>Appointment</strong><span>Walk-ins welcome.<br>Private appointments after-hours by request.</span></div>
+    </div>
+    <div class="visit-map">
+      <div class="visit-map-mark">◆</div>
+      <div class="visit-map-addr"><strong>Meyer Jewelers</strong><br>1262 E Mason St<br>Green Bay, WI 54301</div>
+      <div class="visit-map-since">A Green Bay corner since 1950.</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="final-cta">
+  <div class="container">
+    <h2>Bring her in. Pick the ring together.</h2>
+    <p>Or come alone with a budget and a story. Jim or one of the bench jewelers will sit with you, walk you through three options at your price point, and tell you the truth about each one.</p>
+    <div class="final-actions">
+      <a href="tel:9204321056" class="cta-btn">Book Private Appointment</a>
+      <div class="phone-large">📞 (920) 432-1056</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Meyer <span>Jewelers</span></div>
+        <p style="font-size: 14px; line-height: 1.6;">A Green Bay family jeweler since 1950. Engagement rings, wedding bands, fine jewelry, and in-house repair on East Mason Street.</p>
+      </div>
+      <div>
+        <h5>Visit</h5>
+        <ul>
+          <li>1262 E Mason St</li>
+          <li>Green Bay, WI 54301</li>
+          <li><br></li>
+          <li>Mon-Fri 9:30a-5:30p</li>
+          <li>Sat 9:30a-3:00p</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:9204321056">(920) 432-1056</a></li>
+          <li>info@meyerjewelers.net</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Browse</h5>
+        <ul>
+          <li><a href="#engagement">Engagement Rings</a></li>
+          <li><a href="#engagement">Wedding Bands</a></li>
+          <li><a href="#engagement">Pandora</a></li>
+          <li><a href="#repair">Repair &amp; Resizing</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Meyer Jewelers. All rights reserved.</div>
+      <div>Demo by AG1 Consulting · andrei170.github.io/meyer-jewelers-demo/</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
