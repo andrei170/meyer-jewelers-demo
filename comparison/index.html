@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meyer Jewelers &middot; Before vs After &middot; AG1 Consulting</title>
+<meta name="description" content="75 years on East Mason. The only Pandora retailer in Green Bay. Page 2+ for "engagement rings green bay." Audit + 90-day plan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0F1B2D;
+  --navy-mid: #1B2B47;
+  --navy-deep: #060E1A;
+  --gold: #B89968;
+  --gold-bright: #d6b681;
+  --gold-deep: #8C7349;
+  --cream: #F7F3EC;
+  --cream-warm: #ede4d3;
+  --bone: #E8E0D2;
+  --ink: #1A1A1A;
+  --ink-soft: #4A4A4A;
+  --line: #DDD3C0;
+  --green: #557D4A;
+  --red-x: #B23A3A;
+  --white: #FFFFFF;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--cream); color: var(--ink); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--navy); text-decoration: none; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+.topbar { background: var(--navy-deep); color: var(--cream); padding: 10px 0; font-size: 13px; }
+.topbar-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.topbar-tag { color: var(--gold); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 11px; }
+
+.hero { padding: 100px 0 80px; background: var(--cream); position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: 5%; right: -10%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(184, 153, 104, 0.10), transparent 65%); filter: blur(60px); pointer-events: none; }
+.hero-grid { max-width: 1000px; margin: 0 auto; position: relative; z-index: 2; }
+.eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy); font-weight: 700; margin-bottom: 24px; display: block; }
+.hero h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(44px, 6.5vw, 88px); line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 32px; color: var(--navy); }
+.hero h1 em { font-style: italic; color: var(--gold-deep); }
+.hero p { color: var(--ink-soft); font-size: 19px; max-width: 720px; line-height: 1.55; }
+
+.section { padding: 80px 0; position: relative; }
+.section.alt { background: var(--bone); }
+.section.dark { background: var(--navy); color: var(--cream); }
+.section.dark .section-title { color: var(--white); }
+.section.dark .section-sub { color: rgba(247, 243, 236, 0.78); }
+.section-title { font-family: var(--serif); font-weight: 600; font-size: clamp(32px, 4vw, 56px); letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 16px; color: var(--navy); }
+.section-title em { font-style: italic; color: var(--gold-deep); }
+.section.dark .section-title em { color: var(--gold); }
+.section-sub { color: var(--ink-soft); font-size: 17px; margin-bottom: 56px; max-width: 720px; line-height: 1.6; }
+
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.compare-card { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--white); transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
+.compare-card:hover { border-color: var(--navy); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(15, 27, 45, 0.10); }
+.compare-label { padding: 16px 24px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; }
+.compare-label.current { background: rgba(178, 58, 58, 0.08); color: var(--red-x); border-bottom: 1px solid rgba(178, 58, 58, 0.18); }
+.compare-label.new { background: rgba(184, 153, 104, 0.10); color: var(--gold-deep); border-bottom: 1px solid var(--line); }
+.compare-preview { aspect-ratio: 16/10; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.compare-preview-content { position: relative; z-index: 2; text-align: center; padding: 32px; }
+.compare-preview-content h3 { font-family: var(--serif); font-style: italic; font-size: 32px; font-weight: 600; }
+.compare-preview-content p { font-size: 14px; margin-top: 12px; }
+.compare-preview.current-bg { background: linear-gradient(135deg, var(--bone), var(--cream-warm)); }
+.compare-preview.current-bg .compare-preview-content h3 { color: var(--navy); }
+.compare-preview.current-bg .compare-preview-content p { color: var(--ink-soft); }
+.compare-preview.new-bg { background: linear-gradient(135deg, var(--navy), var(--navy-mid)); }
+.compare-preview.new-bg .compare-preview-content h3 { color: var(--gold); }
+.compare-preview.new-bg .compare-preview-content p { color: rgba(247,243,236,0.78); }
+.compare-body { padding: 28px 32px; }
+.compare-body h4 { font-family: var(--serif); font-size: 24px; font-weight: 600; margin-bottom: 8px; color: var(--navy); }
+.compare-body p { color: var(--ink-soft); font-size: 14px; margin-bottom: 20px; }
+.compare-body ul { list-style: none; margin-bottom: 24px; }
+.compare-body li { padding: 6px 0; font-size: 14px; color: var(--ink-soft); display: flex; align-items: flex-start; gap: 10px; }
+.compare-body li::before { font-size: 12px; margin-top: 2px; flex-shrink: 0; font-weight: 700; }
+.current li::before { content: '\2717'; color: var(--red-x); }
+.new li::before { content: '\2713'; color: var(--green); }
+.compare-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 4px; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.25s; }
+.cta-current { border: 1px solid rgba(178, 58, 58, 0.4); color: var(--red-x); }
+.cta-current:hover { background: rgba(178, 58, 58, 0.06); }
+.cta-new { background: var(--navy); color: var(--white); }
+.cta-new:hover { background: var(--navy-mid); }
+
+.bombshell-section { background: var(--navy); color: var(--cream); }
+.bombshell-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: center; }
+.bombshell-stat { font-family: var(--serif); font-size: clamp(80px, 13vw, 180px); font-weight: 600; line-height: 1; color: var(--gold); letter-spacing: -0.02em; }
+.bombshell-stat em { font-style: italic; }
+.bombshell-stat-label { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247,243,236,0.55); margin-top: 18px; }
+.bombshell-content h2 { font-family: var(--serif); font-size: clamp(32px, 4vw, 56px); font-weight: 600; line-height: 1.05; margin-bottom: 24px; color: var(--white); }
+.bombshell-content h2 em { font-style: italic; color: var(--gold); }
+.bombshell-content p { color: rgba(247,243,236,0.85); font-size: 17px; line-height: 1.7; margin-bottom: 16px; }
+.bombshell-content p strong { color: var(--white); font-weight: 600; }
+
+.gaps-grid { display: grid; grid-template-columns: 1fr; gap: 0; margin-top: 40px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--white); }
+.gaps-row { display: grid; grid-template-columns: 60px 2fr 3fr; align-items: center; padding: 22px 32px; border-bottom: 1px solid var(--line); }
+.gaps-row:last-child { border-bottom: none; }
+.gaps-row.header { background: var(--bone); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--ink-soft); padding: 18px 32px; }
+.gap-num { font-family: var(--serif); font-size: 28px; font-weight: 600; color: var(--gold-deep); font-style: italic; }
+.gap-name { font-family: var(--serif); font-size: 18px; font-weight: 600; color: var(--navy); }
+.gap-detail { font-size: 14px; color: var(--ink-soft); line-height: 1.5; }
+
+.plan-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+.plan-card { padding: 32px; background: var(--white); border: 1px solid var(--line); border-radius: 6px; transition: all 0.3s; position: relative; }
+.plan-card:hover { border-color: var(--navy); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(15, 27, 45, 0.08); }
+.plan-num { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--gold-deep); font-weight: 600; margin-bottom: 16px; display: block; letter-spacing: 0.05em; }
+.plan-card h4 { font-family: var(--serif); font-size: 24px; font-weight: 600; line-height: 1.15; margin-bottom: 12px; color: var(--navy); }
+.plan-card p { color: var(--ink-soft); font-size: 14px; line-height: 1.6; }
+.plan-week { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-deep); font-weight: 700; margin-top: 16px; display: inline-block; }
+
+.scorecard { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--white); }
+.scorecard-header { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 24px 32px; background: var(--bone); border-bottom: 1px solid var(--line); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--ink-soft); }
+.scorecard-row { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 18px 32px; border-bottom: 1px solid var(--line); align-items: center; }
+.scorecard-row:last-child { border-bottom: none; }
+.scorecard-row:hover { background: var(--cream); }
+.scorecard-label { font-size: 15px; color: var(--navy); }
+.scorecard-cell { font-size: 14px; }
+.scorecard-cell.current { color: var(--red-x); }
+.scorecard-cell.new { color: var(--green); font-weight: 700; }
+
+.cta-section { padding: 120px 0; text-align: center; background: var(--cream); }
+.cta-section h2 { font-family: var(--serif); font-size: clamp(36px, 5vw, 64px); font-weight: 600; letter-spacing: -0.02em; margin-bottom: 24px; line-height: 1.05; color: var(--navy); }
+.cta-section h2 em { font-style: italic; color: var(--gold-deep); }
+.cta-section p { color: var(--ink-soft); font-size: 17px; margin-bottom: 40px; max-width: 580px; margin-left: auto; margin-right: auto; }
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-button { display: inline-flex; align-items: center; gap: 8px; padding: 18px 36px; border-radius: 4px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; transition: all 0.25s; }
+.cta-button.primary { background: var(--navy); color: var(--white); }
+.cta-button.primary:hover { background: var(--navy-mid); transform: translateY(-2px); }
+.cta-button.ghost { border: 1px solid var(--line); color: var(--navy); background: var(--white); }
+.cta-button.ghost:hover { border-color: var(--navy); }
+
+footer { padding: 32px 0; border-top: 1px solid var(--line); text-align: center; font-size: 12px; color: var(--ink-soft); background: var(--bone); }
+footer a { color: var(--navy); }
+
+@media (max-width: 1024px) {
+  .compare-grid { grid-template-columns: 1fr; }
+  .bombshell-grid { grid-template-columns: 1fr; gap: 32px; }
+  .plan-grid { grid-template-columns: 1fr 1fr; }
+  .gaps-row { grid-template-columns: 50px 1fr; padding: 14px 20px; gap: 8px; }
+  .gaps-row.header { display: none; }
+  .gaps-row > div:nth-child(3) { grid-column: 1 / -1; padding-left: 60px; }
+}
+@media (max-width: 720px) {
+  .plan-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span class="topbar-tag">Search Audit Report &middot; Prepared by AG1 Consulting</span>
+    <span>For Jim Meyer &middot; Meyer Jewelers</span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <span class="eyebrow">Prepared for Jim Meyer &middot; AG1 Consulting</span>
+      <h1>75 years on East Mason.<br>Helzberg, Kay, and Jared<br>own <em>your search.</em></h1>
+      <p>What meyerjewelers.net looks like to a Green Bay couple Googling their first engagement ring tonight versus what 90 days of schema, a Pandora landing page, and a homepage rebuild could deliver. The 4.5-star rating, the in-house repair work, and the founder story are real. None of it shows up in search.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Meyer Jewelers: <em>before vs after</em></h2>
+    <p class="section-sub">Same East Mason Street storefront. Same Andy Meyer founder story. Same Pandora authorized retailer status. Two very different chances of being on the engagement-ring shortlist tonight.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label current">Today &middot; Live Site</div>
+        <div class="compare-preview current-bg">
+          <div class="compare-preview-content">
+            <h3>meyerjewelers.net</h3>
+            <p>Currently live &middot; Click to view</p>
+          </div>
+        </div>
+        <div class="compare-body current">
+          <h4>What's there now</h4>
+          <p>The 75-year story is real. The 4.5-star rating is real. The Pandora vendor relationship is real. The website doesn't carry any of it into the search environment Green Bay couples actually use.</p>
+          <ul>
+            <li>Not on page 1 for "engagement rings green bay" or "jewelry store green bay wi" (~1,300 monthly searches combined)</li>
+            <li>The 75-year story is not above the fold (the strongest asset on East Mason)</li>
+            <li>Pandora authorized retailer status nowhere on the site (480 monthly searches for "Pandora green bay" — Meyer's is the only one in town)</li>
+            <li>No mobile optimization. No reliable product photos. No pricing visible</li>
+            <li>Zero AI search presence (ChatGPT, Perplexity, Google AI Overview)</li>
+            <li>Rummele's, Reiser's, Kay, Helzberg, Jared hold every page-one organic spot</li>
+          </ul>
+          <a href="https://www.meyerjewelers.net/" target="_blank" rel="noopener" class="compare-cta cta-current">View Live Site &rarr;</a>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="compare-label new">Proposed &middot; A+ Rebuild</div>
+        <div class="compare-preview new-bg">
+          <div class="compare-preview-content">
+            <h3>Meyer Jewelers, reimagined</h3>
+            <p>Click to explore the demo &rarr;</p>
+          </div>
+        </div>
+        <div class="compare-body new">
+          <h4>What we'd ship</h4>
+          <p>A premium navy-and-gold rebuild that puts the 75-year story above the fold, ranks for "engagement rings green bay," and finally surfaces the Pandora-only-in-town moat.</p>
+          <ul>
+            <li>Mobile-first rebuild with reliable product photos and visible pricing</li>
+            <li>Full Person + JewelryStore + Product + AggregateRating + FAQ schema</li>
+            <li>75-year + Andy Meyer founder story above the fold</li>
+            <li>Dedicated /pandora-green-bay landing page (only authorized retailer in town)</li>
+            <li>Service-deep pages for engagement rings, in-house repair, custom design, watch repair</li>
+            <li>Performance gate: page 1 for "engagement rings green bay" by day 90, or work continues at no additional cost</li>
+          </ul>
+          <a href="../" class="compare-cta cta-new">Open the Demo &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bombshell-section">
+  <div class="container">
+    <div class="bombshell-grid">
+      <div>
+        <div class="bombshell-stat">$250K+</div>
+        <div class="bombshell-stat-label">Annual revenue Meyer is leaving on Google's page 2</div>
+      </div>
+      <div class="bombshell-content">
+        <h2>Brown County had <em>1,200 marriages</em> last year.</h2>
+        <p>Roughly 70 percent of engagement-ring buyers start their search online, mostly on a phone. That puts about <strong>840 high-intent local buyers</strong> in front of Google for "engagement rings green bay" every year. Average ring price in northeast Wisconsin: $3,800.</p>
+        <p>Capturing 5 percent of that local search market moves Meyer Jewelers' annual revenue by <strong>$250,000+</strong>. The fix is not the storefront, it is the search infrastructure. Rummele's and Reiser's aren't winning because their rings are better. They're winning because their websites are wired for search.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">The <em>five</em> capping gaps.</h2>
+    <p class="section-sub">In severity order. The mobile rebuild is the largest job. The other four are deployment-level fixes that ship in less than 7 days.</p>
+
+    <div class="gaps-grid">
+      <div class="gaps-row header">
+        <div></div>
+        <div>Gap</div>
+        <div>What it costs</div>
+      </div>
+      <div class="gaps-row">
+        <div class="gap-num">01</div>
+        <div class="gap-name">No mobile optimization</div>
+        <div class="gap-detail">70% of engagement-ring research is on phones. Site renders broken on iPhone Safari. First-impression failure for the highest-intent buyer.</div>
+      </div>
+      <div class="gaps-row">
+        <div class="gap-num">02</div>
+        <div class="gap-name">75-year story below the fold</div>
+        <div class="gap-detail">The strongest asset on East Mason Street is invisible in the first scroll. "Trusted Jewelry Store for over 70 years" with no founder face, no founding year, no story.</div>
+      </div>
+      <div class="gaps-row">
+        <div class="gap-num">03</div>
+        <div class="gap-name">No Pandora landing page</div>
+        <div class="gap-detail">Meyer's is the only Pandora authorized retailer in Green Bay. 480 monthly searches for "Pandora green bay" go to Pandora.com or chains. A dedicated page captures them.</div>
+      </div>
+      <div class="gaps-row">
+        <div class="gap-num">04</div>
+        <div class="gap-name">No Schema, no AI presence</div>
+        <div class="gap-detail">JewelryStore + Product + AggregateRating + FAQ schema all missing. ChatGPT, Perplexity, Google AI Overview return nothing for Meyer Jewelers across local jewelry queries.</div>
+      </div>
+      <div class="gaps-row">
+        <div class="gap-num">05</div>
+        <div class="gap-name">No service-deep pages</div>
+        <div class="gap-detail">Engagement rings, in-house repair, custom design, watch repair — each high-intent service has no dedicated landing page. Rummele's has all four.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h2 class="section-title">The <em>90-day</em> plan.</h2>
+    <p class="section-sub">Four phases. Mobile rebuild ships in week 2. Pandora page and schema deploy in week 3. Service-deep pages and citation campaign follow. By day 90, Meyer Jewelers is on page 1 for the keywords that drive Green Bay engagement-ring traffic.</p>
+
+    <div class="plan-grid">
+      <div class="plan-card">
+        <span class="plan-num">&mdash; Phase 01</span>
+        <h4>Foundation</h4>
+        <p>Mobile-first rebuild with reliable product photography, visible pricing, and the 75-year + Andy Meyer story above the fold. Full schema deployment.</p>
+        <span class="plan-week">Weeks 1&ndash;2</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">&mdash; Phase 02</span>
+        <h4>Pandora Capture</h4>
+        <p>Dedicated /pandora-green-bay landing page. Schema-marked authorized retailer designation. Cross-link to Pandora's official retailer locator. Captures the 480 monthly searches.</p>
+        <span class="plan-week">Week 3</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">&mdash; Phase 03</span>
+        <h4>Service-Deep Pages</h4>
+        <p>/engagement-rings-green-bay, /jewelry-repair-green-bay, /custom-design, /watch-repair. Each schema-marked Service with FAQ blocks. Internal linking architecture.</p>
+        <span class="plan-week">Weeks 4&ndash;6</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">&mdash; Phase 04</span>
+        <h4>Citation Campaign</h4>
+        <p>WeddingWire, The Knot, Yelp Top 10 features. GMB photo refresh + post cadence. Review-velocity automation. Monthly performance dashboard.</p>
+        <span class="plan-week">Weeks 6&ndash;12</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">The <em>scorecard.</em></h2>
+    <p class="section-sub">Every signal Google and AI search engines check, the current meyerjewelers.net graded against the 90-day rebuild.</p>
+
+    <div class="scorecard">
+      <div class="scorecard-header">
+        <div>Signal</div>
+        <div>Today</div>
+        <div>After plan</div>
+      </div>
+      <div class="scorecard-row"><div class="scorecard-label">Mobile optimization</div><div class="scorecard-cell current">&times; Broken</div><div class="scorecard-cell new">&check; Mobile-first</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">JewelryStore + Product schema</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Full</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">FAQPage + AggregateRating schema</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Live</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">75-year story above the fold</div><div class="scorecard-cell current">&times; Buried</div><div class="scorecard-cell new">&check; Hero</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Pandora authorized retailer landing page</div><div class="scorecard-cell current">&times; Missing</div><div class="scorecard-cell new">&check; Live</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">"Engagement rings green bay" ranking</div><div class="scorecard-cell current">Page 2+</div><div class="scorecard-cell new">Page 1 target</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Service-deep pages (rings, repair, custom, watch)</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; 4 pages</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">AI Overview citation rate</div><div class="scorecard-cell current">0</div><div class="scorecard-cell new">Cited</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Reliable product photos</div><div class="scorecard-cell current">Spotty</div><div class="scorecard-cell new">&check; Optimized</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Visible pricing</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Tiered</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Design tier</div><div class="scorecard-cell current">2010s</div><div class="scorecard-cell new">A+</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>The Green Bay couple shopping<br>their first ring tonight<br>can't <em>find</em> you.</h2>
+    <p>Right now, Google is sending them to Helzberg. Ninety days from now, that changes.</p>
+    <div class="cta-buttons">
+      <a href="mailto:info@andreicopy.net" class="cta-button primary">Book the Strategy Call &rarr;</a>
+      <a href="../" class="cta-button ghost">Open the Demo &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>AG1 Consulting &middot; Andrei Givero &middot; info@andreicopy.net &middot; <a href="https://andrei170.github.io/ag1/">andrei170.github.io/ag1</a></span>
+</footer>
+
+</body>
+</html>
